@@ -139,12 +139,21 @@
     </article>
   </section>
 
-  <!-- ============ HIGHLIGHTS ============ -->
-  <section class="under-hood" aria-label="Engineering highlights">
-    <div class="under-hood-inner">
-      <p class="eyebrow eyebrow-dark">UNDER THE HOOD</p>
-      <h2>The parts you can’t screenshot</h2>
-      <dl class="highlights">
+  <!-- ============ THINGS I'VE BUILT ============ -->
+  <section class="built" aria-label="Things I've built">
+    <p class="eyebrow">SHIPPED, END TO END</p>
+    <h2>Things I’ve built</h2>
+
+    <article class="project">
+      <header class="project-head">
+        <h3>Lingofloat</h3>
+        <p class="project-sub">
+          AI language-learning platform · web + iOS · a few hundred learners ·
+          designed, built and operated solo since 2024 ·
+          <a href="https://app.lingofloat.com" target="_blank" rel="noopener">app.lingofloat.com</a>
+        </p>
+      </header>
+      <dl class="rows">
         <div class="hl">
           <dt>Frontend</dt>
           <dd>A word-level interactive audio player: auto-pause at sentence ends, one-tap repeat, and select any span of the transcript to replay exactly that audio. Precise audio–text syncing under a UI polished enough to be the product’s differentiator.</dd>
@@ -154,7 +163,7 @@
           <dd>A BullMQ job system managing outbound API concurrency, with retry and error-handling strategies that keep audio processing reliable at scale.</dd>
         </div>
         <div class="hl">
-          <dt>AI workflows</dt>
+          <dt>AI workflow</dt>
           <dd>A custom practice-session pipeline — prompt engineering, FFmpeg audio processing, and defensive engineering around LLM and API failures — turning learner-selected content into tailored practice sessions.</dd>
         </div>
         <div class="hl">
@@ -162,7 +171,7 @@
           <dd>A production audio-ingestion pipeline (yt-dlp, FFmpeg, proxy routing) engineered to keep sourcing content despite aggressive bot detection — a hard operational problem the product depended on.</dd>
         </div>
         <div class="hl">
-          <dt>Web</dt>
+          <dt>Landing page</dt>
           <dd>A Next.js landing page in 18 languages, server-rendered for SEO.</dd>
         </div>
         <div class="hl">
@@ -170,7 +179,27 @@
           <dd>Migrated the React web app to iOS with Capacitor with minimal rework — and got it through App Store review.</dd>
         </div>
       </dl>
-    </div>
+    </article>
+
+    <article class="project">
+      <header class="project-head">
+        <h3>Clocksmith</h3>
+        <p class="project-sub">
+          Native macOS app · Swift/SwiftUI · paid, signed &amp; notarized ·
+          <a href="https://shawnchiao.github.io/clocksmith/" target="_blank" rel="noopener">shawnchiao.github.io/clocksmith</a>
+        </p>
+      </header>
+      <dl class="rows">
+        <div class="hl">
+          <dt>What</dt>
+          <dd>A dashboard for every scheduled job on your Mac: live status for each launchd agent, last-run history pulled from the system log, and run / enable / disable controls with automatic config backup and restore.</dd>
+        </div>
+        <div class="hl">
+          <dt>Shipped</dt>
+          <dd>Sold as a one-time purchase — signed, notarized, distributed with a Homebrew tap and a bilingual (English / Traditional Chinese) site, all built by one person.</dd>
+        </div>
+      </dl>
+    </article>
   </section>
 
   <!-- ============ LINKS ============ -->
