@@ -48,33 +48,19 @@ h2 { font-size: clamp(26px, 3.6vw, 36px); }
 h3 { font-size: clamp(20px, 2.4vw, 24px); line-height: 1.2; }
 
 /* ————— hero ————— */
-.hero { padding: clamp(64px, 10vw, 120px) 0 clamp(40px, 6vw, 72px); }
-.hero h1 { margin: 26px 0 24px; max-width: 17em; }
-.lede {
-  max-width: 40em;
-  font-size: clamp(17px, 1.9vw, 19px);
-  color: var(--ink-soft);
-}
-.lede a {
-  color: var(--ink);
-  font-weight: 600;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 3px;
-}
-.lede a:hover { text-decoration-thickness: 2px; }
+.hero { padding: clamp(64px, 10vw, 120px) 0 clamp(36px, 5vw, 64px); }
+.hero h1 { margin-top: 26px; }
 
 /* ————— cases ————— */
 .cases { padding: clamp(40px, 6vw, 64px) 0 clamp(56px, 8vw, 88px); border-top: 1px solid var(--line); }
-.cases h2 { margin: 20px 0 10px; }
-.section-note { color: var(--ink-soft); font-size: 15.5px; }
 
-.case { margin-top: clamp(56px, 8vw, 84px); }
+.case { margin-top: clamp(44px, 6vw, 64px); }
+.case:first-of-type { margin-top: clamp(28px, 4vw, 40px); }
 .case-head {
   display: flex;
-  gap: 22px;
+  gap: 18px;
   align-items: baseline;
-  max-width: 46em;
-  margin-bottom: 26px;
+  margin-bottom: 18px;
 }
 .case-num {
   font-family: var(--font-mono);
@@ -83,7 +69,6 @@ h3 { font-size: clamp(20px, 2.4vw, 24px); line-height: 1.2; }
   color: var(--ink-soft);
   flex: none;
 }
-.case-head p { margin-top: 10px; color: var(--ink-soft); }
 
 /* before/after slider */
 .ba-labels {
@@ -177,22 +162,6 @@ h3 { font-size: clamp(20px, 2.4vw, 24px); line-height: 1.2; }
 .ba-frame:hover .ba-ch-l { transform: translateX(-1.5px); }
 .ba-frame:hover .ba-ch-r { transform: translateX(1.5px); }
 .ba-handle:focus-visible .ba-grip { box-shadow: 0 0 0 2px var(--ink), 0 2px 10px rgba(28, 28, 26, 0.28); }
-
-.fixes {
-  list-style: none;
-  margin-top: 24px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px 28px;
-}
-.fixes li {
-  font-size: 15px;
-  line-height: 1.55;
-  color: var(--ink-soft);
-  padding-top: 14px;
-  border-top: 2px solid var(--ink);
-}
-.fixes li::first-line { color: var(--ink); }
 
 /* ————— things I've built (document-style) ————— */
 .built { border-top: 1px solid var(--line); padding: clamp(40px, 6vw, 64px) 0 clamp(48px, 7vw, 72px); }
@@ -288,8 +257,6 @@ h3 { font-size: clamp(20px, 2.4vw, 24px); line-height: 1.2; }
 /* ————— responsive ————— */
 @media (max-width: 760px) {
   body { font-size: 16px; }
-  .case-head { flex-direction: column; gap: 8px; }
-  .fixes { grid-template-columns: 1fr; gap: 14px; }
   .hl { grid-template-columns: 1fr; gap: 6px; }
   .link-list li { grid-template-columns: 1fr; gap: 2px; }
   .ba-grip { width: 34px; height: 34px; }

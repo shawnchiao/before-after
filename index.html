@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=4">
+<link rel="stylesheet" href="styles.css?v=5">
 </head>
 <body>
 
@@ -18,32 +18,18 @@
   <!-- ============ HERO ============ -->
   <header class="hero">
     <p class="eyebrow">SHAWN CHIAO — PRODUCT ENGINEER · ADELAIDE, AU</p>
-    <h1>Ship the whole thing.<br>Then reopen it, because clunky bothers me.</h1>
-    <p class="lede">
-      I built <a href="https://app.lingofloat.com" target="_blank" rel="noopener">Lingofloat</a> — an AI
-      language-learning platform — alone: React front end, Node&nbsp;+&nbsp;BullMQ backend, AI pipelines,
-      iOS release. A few hundred learners use it. You asked for before/afters first, so here they are.
-    </p>
+    <h1>UI Improvement</h1>
   </header>
 
   <!-- ============ BEFORE / AFTER ============ -->
   <section class="cases" aria-label="Before and after case studies">
     <p class="eyebrow">BEFORE / AFTER</p>
-    <h2>Three screens that bothered me</h2>
-    <p class="section-note">Drag the handle. Everything on the “after” side shipped to production.</p>
 
     <!-- Case 1: Auth -->
     <article class="case">
       <div class="case-head">
         <span class="case-num">01</span>
-        <div>
-          <h3>The login was someone else’s template</h3>
-          <p>
-            Stock Auth0: a white template card floating in a void, link colors that belonged to no palette,
-            the logo squeezed into a tiny box. It was the first screen every user saw — and it said
-            nothing about the product.
-          </p>
-        </div>
+        <h3>Auth Page</h3>
       </div>
       <div class="ba" data-ba>
         <div class="ba-labels" aria-hidden="true"><span>Before</span><span>After</span></div>
@@ -61,24 +47,13 @@
         </div>
         </div>
       </div>
-      <ul class="fixes">
-        <li>A split layout gives the brand a side of its own — wordmark, breathing room, one hairline rule.</li>
-        <li>The form sits on frosted glass over an ambient gradient, so signing in feels like part of the product, not a detour through a vendor.</li>
-        <li>One mint gradient is reserved for the single primary action; everything else steps back to outline weight.</li>
-      </ul>
     </article>
 
     <!-- Case 2: Player -->
     <article class="case">
       <div class="case-head">
         <span class="case-num">02</span>
-        <div>
-          <h3>A transcript is not a log file</h3>
-          <p>
-            The player is the product, but it read like terminal output: every sentence at equal weight,
-            controls crowded into a strip welded to the bottom edge of the screen.
-          </p>
-        </div>
+        <h3>Immersive Media Player</h3>
       </div>
       <div class="ba" data-ba>
         <div class="ba-labels" aria-hidden="true"><span>Before</span><span>After</span></div>
@@ -96,24 +71,13 @@
         </div>
         </div>
       </div>
-      <ul class="fixes">
-        <li>The controls became a floating pill on an artwork-tinted stage — the screen feels like listening, not scrubbing.</li>
-        <li>The current sentence carries full contrast while past and upcoming lines fall back, so your eye always knows where the audio is.</li>
-        <li>Per-sentence actions (replay, analyze) live at the timestamp — where your cursor already is.</li>
-      </ul>
     </article>
 
     <!-- Case 3: Browse -->
     <article class="case">
       <div class="case-head">
         <span class="case-num">03</span>
-        <div>
-          <h3>Two themes fighting on one screen</h3>
-          <p>
-            Light cards pasted onto a dark shell, a search bar from a different app, tabs in three styles.
-            Each piece was fine on its own; together, it was noise.
-          </p>
-        </div>
+        <h3>Podcast List</h3>
       </div>
       <div class="ba" data-ba>
         <div class="ba-labels" aria-hidden="true"><span>Before</span><span>After</span></div>
@@ -131,11 +95,6 @@
         </div>
         </div>
       </div>
-      <ul class="fixes">
-        <li>One dark surface system: cards, tabs, search and nav share the same material, radius and border logic.</li>
-        <li>Artwork is now the loudest thing in the grid — because nothing else is shouting.</li>
-        <li>Search took center stage with quiet filter pills; the chrome got out of the way.</li>
-      </ul>
     </article>
   </section>
 
