@@ -91,7 +91,7 @@ h3 { font-size: clamp(20px, 2.4vw, 24px); line-height: 1.2; }
 .ba-labels span:last-child { margin-right: -9px; }
 [data-side="before"] .ba-labels span:first-child,
 [data-side="after"] .ba-labels span:last-child {
-  background: var(--ink);
+  background: #7A7A6A;
   color: var(--paper);
 }
 .ba-frame {
