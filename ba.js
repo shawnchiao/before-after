@@ -20,6 +20,8 @@ document.querySelectorAll("[data-ba]").forEach((ba) => {
     const x = f.left + (pos / 100) * f.width;
     const clip = Math.min(100, Math.max(0, ((x - s.left) / s.width) * 100));
     stage.style.setProperty("--clip", clip + "%");
+    // Tell the viewer which side dominates the view right now.
+    ba.dataset.side = clip < 47 ? "after" : clip > 53 ? "before" : "";
     handle.setAttribute("aria-valuenow", Math.round(pos));
   };
 
@@ -55,7 +57,7 @@ document.querySelectorAll("[data-ba]").forEach((ba) => {
     interacted = true;
     stopNudge();
     dragging = true;
-    frame.setPointerCapture(e.pointerId);
+    try { frame.setPointerCapture(e.pointerId); } catch (_) { /* stale pointer id */ }
     setFromClientX(e.clientX);
   });
   frame.addEventListener("pointermove", (e) => {
