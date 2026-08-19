@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shawn Chiao — Before / After</title>
+<meta name="description" content="Three screens from Lingofloat that bothered me, before and after — plus the engineering underneath. Shawn Chiao, product engineer.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23DCF25A'/><text x='50' y='72' font-size='62' font-family='monospace' font-weight='bold' text-anchor='middle' fill='%23191712'>S</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<main class="page">
+
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <p class="eyebrow"><span class="dot"></span>SHAWN CHIAO — PRODUCT ENGINEER · ADELAIDE, AU</p>
+    <h1>Ship the whole thing.<br>Then reopen it, because <mark>clunky bothers me.</mark></h1>
+    <p class="lede">
+      I built <a href="https://app.lingofloat.com" target="_blank" rel="noopener">Lingofloat</a> — an AI
+      language-learning platform — alone: React front end, Node&nbsp;+&nbsp;BullMQ backend, AI pipelines,
+      iOS release. A few hundred learners use it. You asked for before/afters first, so here they are.
+    </p>
+  </header>
+
+  <!-- ============ BEFORE / AFTER ============ -->
+  <section class="cases" aria-label="Before and after case studies">
+    <p class="eyebrow"><span class="dot"></span>BEFORE / AFTER</p>
+    <h2>Three screens that bothered me</h2>
+    <p class="section-note">Drag the handle. Everything on the “after” side shipped to production.</p>
+
+    <!-- Case 1: Auth -->
+    <article class="case">
+      <div class="case-head">
+        <span class="case-num">01</span>
+        <div>
+          <h3>The login was someone else’s template</h3>
+          <p>
+            Stock Auth0: a white template card floating in a void, link colors that belonged to no palette,
+            the logo squeezed into a tiny box. It was the first screen every user saw — and it said
+            nothing about the product.
+          </p>
+        </div>
+      </div>
+      <div class="ba" data-ba style="aspect-ratio: 1600 / 905">
+        <img class="ba-after" src="img/auth-after.jpg" alt="Redesigned Lingofloat login: split layout with the wordmark on the left and a frosted-glass sign-in card over an ambient gradient" loading="lazy">
+        <div class="ba-before-wrap">
+          <img class="ba-before" src="img/auth-before.jpg" alt="Original login: default Auth0 white card centered on a plain dark background" loading="lazy">
+        </div>
+        <span class="ba-tag ba-tag-before">Before</span>
+        <span class="ba-tag ba-tag-after">After</span>
+        <div class="ba-handle" role="slider" tabindex="0" aria-label="Comparison slider: reveal before or after" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+          <span class="ba-grip" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="14" height="14"><path d="M8 5l-6 7 6 7M16 5l6 7-6 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </div>
+      </div>
+      <ul class="fixes">
+        <li>A split layout gives the brand a side of its own — wordmark, breathing room, one hairline rule.</li>
+        <li>The form sits on frosted glass over an ambient gradient, so signing in feels like part of the product, not a detour through a vendor.</li>
+        <li>One mint gradient is reserved for the single primary action; everything else steps back to outline weight.</li>
+      </ul>
+    </article>
+
+    <!-- Case 2: Player -->
+    <article class="case">
+      <div class="case-head">
+        <span class="case-num">02</span>
+        <div>
+          <h3>A transcript is not a log file</h3>
+          <p>
+            The player is the product, but it read like terminal output: every sentence at equal weight,
+            controls crowded into a strip welded to the bottom edge of the screen.
+          </p>
+        </div>
+      </div>
+      <div class="ba" data-ba style="aspect-ratio: 1600 / 921">
+        <img class="ba-after" src="img/player-after.jpg" alt="Redesigned player: floating pill-shaped player bar, dimmed context lines around the current sentence, per-sentence actions at the timestamps" loading="lazy">
+        <div class="ba-before-wrap">
+          <img class="ba-before" src="img/player-before.jpg" alt="Original player: flat list of transcript rows with a full-width control bar pinned to the bottom" loading="lazy">
+        </div>
+        <span class="ba-tag ba-tag-before">Before</span>
+        <span class="ba-tag ba-tag-after">After</span>
+        <div class="ba-handle" role="slider" tabindex="0" aria-label="Comparison slider: reveal before or after" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+          <span class="ba-grip" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="14" height="14"><path d="M8 5l-6 7 6 7M16 5l6 7-6 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </div>
+      </div>
+      <ul class="fixes">
+        <li>The controls became a floating pill on an artwork-tinted stage — the screen feels like listening, not scrubbing.</li>
+        <li>The current sentence carries full contrast while past and upcoming lines fall back, so your eye always knows where the audio is.</li>
+        <li>Per-sentence actions (replay, analyze) live at the timestamp — where your cursor already is.</li>
+      </ul>
+    </article>
+
+    <!-- Case 3: Browse -->
+    <article class="case">
+      <div class="case-head">
+        <span class="case-num">03</span>
+        <div>
+          <h3>Two themes fighting on one screen</h3>
+          <p>
+            Light cards pasted onto a dark shell, a search bar from a different app, tabs in three styles.
+            Each piece was fine on its own; together, it was noise.
+          </p>
+        </div>
+      </div>
+      <div class="ba" data-ba style="aspect-ratio: 1600 / 878">
+        <img class="ba-after" src="img/podcast-after.jpg" alt="Redesigned podcast browser: one consistent dark surface system where the podcast artwork provides the color" loading="lazy">
+        <div class="ba-before-wrap">
+          <img class="ba-before" src="img/podcast-before.jpg" alt="Original podcast browser: white cards and mixed light and dark components on a dark sidebar layout" loading="lazy">
+        </div>
+        <span class="ba-tag ba-tag-before">Before</span>
+        <span class="ba-tag ba-tag-after">After</span>
+        <div class="ba-handle" role="slider" tabindex="0" aria-label="Comparison slider: reveal before or after" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+          <span class="ba-grip" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="14" height="14"><path d="M8 5l-6 7 6 7M16 5l6 7-6 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </div>
+      </div>
+      <ul class="fixes">
+        <li>One dark surface system: cards, tabs, search and nav share the same material, radius and border logic.</li>
+        <li>Artwork is now the loudest thing in the grid — because nothing else is shouting.</li>
+        <li>Search took center stage with quiet filter pills; the chrome got out of the way.</li>
+      </ul>
+    </article>
+  </section>
+
+  <!-- ============ HIGHLIGHTS ============ -->
+  <section class="under-hood" aria-label="Engineering highlights">
+    <div class="under-hood-inner">
+      <p class="eyebrow eyebrow-dark"><span class="dot"></span>UNDER THE HOOD</p>
+      <h2>The parts you can’t screenshot</h2>
+      <dl class="highlights">
+        <div class="hl">
+          <dt>Frontend</dt>
+          <dd>A word-level interactive audio player: auto-pause at sentence ends, one-tap repeat, and select any span of the transcript to replay exactly that audio. Precise audio–text syncing under a UI polished enough to be the product’s differentiator.</dd>
+        </div>
+        <div class="hl">
+          <dt>Backend</dt>
+          <dd>A BullMQ job system managing outbound API concurrency, with retry and error-handling strategies that keep audio processing reliable at scale.</dd>
+        </div>
+        <div class="hl">
+          <dt>AI workflows</dt>
+          <dd>A custom practice-session pipeline — prompt engineering, FFmpeg audio processing, and defensive engineering around LLM and API failures — turning learner-selected content into tailored practice sessions.</dd>
+        </div>
+        <div class="hl">
+          <dt>Ingestion</dt>
+          <dd>A production audio-ingestion pipeline (yt-dlp, FFmpeg, proxy routing) engineered to keep sourcing content despite aggressive bot detection — a hard operational problem the product depended on.</dd>
+        </div>
+        <div class="hl">
+          <dt>Web</dt>
+          <dd>A Next.js landing page in 18 languages, server-rendered for SEO.</dd>
+        </div>
+        <div class="hl">
+          <dt>Mobile</dt>
+          <dd>Migrated the React web app to iOS with Capacitor with minimal rework — and got it through App Store review.</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ============ LINKS ============ -->
+  <section class="links" aria-label="Links">
+    <p class="eyebrow"><span class="dot"></span>SEE IT LIVE</p>
+    <h2>Poke at the real thing</h2>
+    <div class="link-row">
+      <a class="pill pill-solid" href="https://app.lingofloat.com" target="_blank" rel="noopener">Try Lingofloat →</a>
+      <a class="pill" href="https://github.com/shawnchiao" target="_blank" rel="noopener">GitHub</a>
+      <a class="pill" href="mailto:shawn1763@gmail.com">shawn1763@gmail.com</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>
+      This page is hand-written HTML and CSS — no framework, no build step, one small script for the
+      sliders. A page about UI taste should weigh less than its screenshots.
+    </p>
+    <p class="footer-sig">Shawn Chiao · Adelaide, Australia</p>
+  </footer>
+
+</main>
+
+<script src="ba.js"></script>
+</body>
+</html>
